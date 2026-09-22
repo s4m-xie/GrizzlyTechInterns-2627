@@ -13,20 +13,20 @@ Create the classes described below. The purpose of this activity is to demonstra
 
 Create these four files:
 
-1. `OrderSize.java` — an enum for the available order sizes
+1. `HolderType.java` — an enum for the available serving holders
 2. `IceCreamOrder.java` — an abstract parent class for a standard order
 3. `SpecialIceCreamOrder.java` — a child class for an order with an additional special fee
 4. `StoreSimulation.java` — contains a `simulateDay()` method that creates and works with orders; do not add a `main` method
 
-## Part 1 OrderSize Enum
+## Part 1 HolderType Enum
 
-Create an enum named `OrderSize` with these constants:
+Create an enum named `HolderType` with these constants:
 
-- `SMALL`
-- `MEDIUM`
-- `LARGE`
+- `CUP`
+- `SUGAR_CONE`
+- `WAFFLE_CONE`
 
-The enum must be used as the data type of an instance variable in `IceCreamOrder`. It must also be used in a `switch` statement later in the activity.
+The enum represents the kind of holder for the order, not its scoop count. Use it as the data type of an instance variable in `IceCreamOrder` and in a `switch` statement later in the activity.
 
 ## Part 2 Abstract IceCreamOrder Class
 
@@ -40,7 +40,7 @@ Declare these six instance variables as `private`:
 - `int scoopCount` — the number of scoops ordered
 - `double pricePerScoop` — the price of one scoop
 - `boolean paid` — whether the customer has paid
-- `OrderSize size` — the selected order size
+- `HolderType holderType` — the selected cup or cone
 - `String[] flavors` — the flavors included in the order
 
 These fields demonstrate `String`, `int`, `double`, `boolean`, an enum type, and an array.
@@ -53,7 +53,7 @@ The constructor must prevent an order from starting with a negative `scoopCount`
 
 ### Encapsulation
 
-Create getter methods for `customerName`, `scoopCount`, `paid`, and `size`.
+Create getter methods for `customerName`, `scoopCount`, `paid`, and `holderType`.
 
 Create these setters:
 
@@ -99,11 +99,11 @@ This method must use comparison, logical, and boolean operators.
 
 ### getContainerType
 
-Create `public String getContainerType()` using a `switch` on `size`.
+Create `public String getContainerType()` using a `switch` on `holderType`.
 
-- `SMALL` returns `"Small cup"`.
-- `MEDIUM` returns `"Medium cup"`.
-- `LARGE` returns `"Large cup"`.
+- `CUP` returns `"Cup"`.
+- `SUGAR_CONE` returns `"Sugar cone"`.
+- `WAFFLE_CONE` returns `"Waffle cone"`.
 
 ### hasFlavor
 
@@ -188,7 +188,7 @@ The parent-type variable must call the overridden child method. This is the requ
 
 ## Submission Checklist
 
-- [ ] `OrderSize` contains `SMALL`, `MEDIUM`, and `LARGE` and is used in the class logic.
+- [ ] `HolderType` contains `CUP`, `SUGAR_CONE`, and `WAFFLE_CONE` and is used in the class logic.
 - [ ] `IceCreamOrder` is abstract and contains all six required private fields.
 - [ ] The parent constructor uses `this` and validates negative numeric values.
 - [ ] Getters and validated setters demonstrate encapsulation.
