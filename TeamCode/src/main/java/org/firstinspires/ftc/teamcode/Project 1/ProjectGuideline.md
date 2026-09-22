@@ -1,5 +1,8 @@
 # John’s Ice Cream Store Simulation
 
+Due Date: 2 weeks (October 6). 
+Recommended Timeline: Go through w3 by next week (Sept 29), work on project for next week
+
 ## Scenario
 
 John is setting up an ice cream store. He needs Java classes to represent customer orders, calculate prices, record flavors, and handle special orders.

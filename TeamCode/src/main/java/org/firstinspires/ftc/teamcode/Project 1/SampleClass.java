@@ -1,7 +1,9 @@
 
 //what was lectured during sept 15
 
-public class SampleClass() {
+//sample subsystem 
+public class SampleClass() extends SubsystemBase {
+    
     
     private int x;
     
@@ -12,5 +14,11 @@ public class SampleClass() {
 
     public void method() {
         //sample method
+    }
+
+    @Override
+    public void periodic() {
+        //sample periodic 
+        // remember this is cycled again and again when ran through the robot
     }
 }
