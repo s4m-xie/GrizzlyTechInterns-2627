@@ -14,6 +14,8 @@ public class MotorCommandOpMode extends CommandOpMode {
     public void initialize() {
 
         m_motorSubsystem = new MotorSubsystem(hardwareMap);
+        gp1 = new GamepadEx(gamepad1);
+
         register(m_motorSubsystem);
 
         gp1.getGamepadButton(GamepadKeys.Button.DPAD_UP)
