@@ -2,8 +2,9 @@ package org.firstinspires.ftc.teamcode.Project2;
 
 import com.seattlesolvers.solverslib.command.CommandOpMode;
 import com.seattlesolvers.solverslib.gamepad.GamepadEx;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-
+@TeleOp(name = "MotorCommandOpMode")
 public class MotorCommandOpMode extends CommandOpMode {
 
     private MotorSubsystem motorsubsystem;
